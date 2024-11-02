@@ -1,7 +1,7 @@
 package main.java.linkedList;
 
 
-public class SinglyLinkedList implements LinkedList {
+public class DoublyLinkedList implements LinkedList {
     Node head;
 
     @Override
@@ -106,11 +106,11 @@ public class SinglyLinkedList implements LinkedList {
 
     @Override
     public void reverse(Node head) {
-        
+
     }
 
     public static void main(String args[]) {
-        LinkedList list = new SinglyLinkedList();
+        LinkedList list = new DoublyLinkedList();
         list.append(new Node(2));
         list.append(new Node(3));
         list.append(new Node(9));

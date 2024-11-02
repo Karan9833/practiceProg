@@ -8,4 +8,5 @@ public interface LinkedList {
     void display();
     int count();
     boolean detectCycle();
+    void reverse(Node head);
 }
