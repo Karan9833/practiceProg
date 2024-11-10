@@ -1,4 +1,5 @@
 package main.java.dynamicProgramming;
+
 /*
 Given an integer array nums, return true if you can partition the array into two subsets such that the sum of the elements in both subsets is equal or false otherwise.
 
@@ -38,6 +39,6 @@ public class EqualSumPartitionSubSet {
     public static void main(String[] args) {
         int arr[] = {1, 5, 11, 5};
         EqualSumPartitionSubSet equalSumPartitionSubSet = new EqualSumPartitionSubSet();
-        equalSumPartitionSubSet.checkEqualPartitionSubset(arr);
+        System.out.println("check if equal partition exists for given array: " + equalSumPartitionSubSet.checkEqualPartitionSubset(arr));
     }
 }
