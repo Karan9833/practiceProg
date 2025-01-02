@@ -2,9 +2,14 @@ package main.java.dynamicProgramming;
 
 /*
 Problem statement :
-You are given the weights and values of items, and you need to put these items in a knapsack of capacity capacity to achieve the maximum total value in the knapsack. Each item is available in only one quantity.
+You are given the weights and values of items, and you need to put these items in a knapsack of capacity
+ to achieve the maximum total value in the knapsack. Each item is available in only one quantity.
 
-In other words, you are given two integer arrays val[] and wt[], which represent the values and weights associated with items, respectively. You are also given an integer capacity, which represents the knapsack capacity. Your task is to find the maximum sum of values of a subset of val[] such that the sum of the weights of the corresponding subset is less than or equal to capacity. You cannot break an item; you must either pick the entire item or leave it (0-1 property).
+In other words, you are given two integer arrays val[] and wt[], which represent the values and weights associated with items,
+respectively. You are also given an integer capacity, which represents the knapsack capacity.
+Your task is to find the maximum sum of values of a subset of val[] such that the
+sum of the weights of the corresponding subset is less than or equal to capacity.
+You cannot break an item; you must either pick the entire item or leave it (0-1 property).
 
 Examples :
 
@@ -54,7 +59,7 @@ public class Knapsack {
         }
 
         /* choice diagram either we add to knapsack or not
-            depending on whether value of the weight Wi is less than knpsack capacity
+            depending on whether value of the weight Wi is less than knapsack capacity
          */
         if (wt[n - 1] <= capacity) {
             // if weight at index position is less than capacity either we add to the knapsack or we don't
@@ -78,13 +83,13 @@ public class Knapsack {
         int dp[][] = new int[n + 1][capacity + 1];
         //array to store computation result with size n+1 and w+1
         // because if we keep size dp[n][w], last value computed would be dp[n-1][w-1]
-        // but the value we want is at dp[n][w]
+        // but the value we want is at dp[n][w] after computation of all values and visiting all weights
 
-        for (int i = 0; i <= n + 1; i++) {
-            for (int j = 0; j <= capacity + 1; j++) {
-                if (n == 0 || capacity == 0) {
+        for (int i = 0; i < n + 1; i++) { ////i - number of elements selected ,value gained by processing weights/elements selected at a given point
+            for (int j = 0; j < capacity + 1; j++) { //j = capacity of knapsack at a given point
+                if (i == 0 || j == 0) {
                     //if no value in the array, or if capacity is 0 , we simply return o
-                    return 0; //base condition initialization
+                   dp[i][j] =0; //base condition initialization
                 }
             }
         }

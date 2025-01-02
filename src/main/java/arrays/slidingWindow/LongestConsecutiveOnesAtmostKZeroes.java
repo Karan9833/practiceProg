@@ -54,7 +54,7 @@ public class LongestConsecutiveOnesAtmostKZeroes {
     Space complexity : O(10
      */
     public int findLongestOnes(int inputArr[], int limit) {
-        //Think of question as we have max k zeroes allowed , instead of thinking of flipping
+        //Think of the question as we have max k zeroes allowed , instead of thinking of flipping 0s
         int l = 0, r = 0, maxLen = 0, k = 0;
         while (l <= r && r < inputArr.length) {
             if (inputArr[r] == 0) {

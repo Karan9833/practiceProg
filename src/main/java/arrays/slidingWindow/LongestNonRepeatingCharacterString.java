@@ -94,7 +94,7 @@ public class LongestNonRepeatingCharacterString {
         while (l <= r && r < inputString.length()) {
             if (characters.contains(inputString.charAt(r))) {
                 while (characters.contains(inputString.charAt(r))) {
-                    // keeping an if condition instead of while fails if l and r point to same alphabets,
+                    // keeping an if condition instead of while fails if l and r point to same alphabets at different indexes,
                     // a in takeUForward , hence an extra while
                     //same chars will mostly be at edges , hence removing l
                     characters.remove(inputString.charAt(l));
